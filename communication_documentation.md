@@ -1,0 +1,1 @@
+Ця документація описує взаємо зв'язки  [[Server Logic]] і [[connector_manager]]
