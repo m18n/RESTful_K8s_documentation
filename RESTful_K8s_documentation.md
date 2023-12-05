@@ -3,7 +3,7 @@ Type:
 tags: 
 Data: 2023-12-05
 ---
-Комунікація
+Цей проект складається з двух частин [[Server Logic]] і [[Connector Manager]]
 ## Question
 ```dataview
 LIST FROM ""
