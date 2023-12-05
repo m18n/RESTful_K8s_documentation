@@ -4,43 +4,55 @@ tags:
 Data: 2023-12-06
 ---
 Цей модуль являється мастер тому що він роздає всі карти розтушування модулів у [[Server Logic]] і [[Connector Manager]] в [[kubernetes]]. 
-## Idea
+## Facts
+```dataview
+LIST FROM ""
+WHERE contains(file.outlinks.file.name, this.file.name)
+AND contains(Type, "fact")
+```
+## Topics
+```dataview
+LIST FROM ""
+WHERE contains(file.outlinks.file.name, this.file.name)
+AND contains(Type, "topic")
+```
+## Ideas
 ```dataview
 LIST FROM ""
 WHERE contains(file.outlinks.file.name, this.file.name)
 AND contains(Type, "idea")
 ```
-## Question
+## Questions
 ```dataview
 LIST FROM ""
 WHERE contains(file.outlinks.file.name, this.file.name)
 AND contains(Type, "question")
 ```
-## Answer
+## Answers
 ```dataview
 LIST FROM ""
 WHERE contains(file.outlinks.file.name, this.file.name)
 AND contains(Type, "answer")
 ```
-## Bug
+## Bugs
 ```dataview
 LIST FROM ""
 WHERE contains(file.outlinks.file.name, this.file.name)
 AND contains(Type, "bug")
 ```
-## Fix
+## Fixs
 ```dataview
 LIST FROM ""
 WHERE contains(file.outlinks.file.name, this.file.name)
 AND contains(Type, "fix")
 ```
-## Root
+## Roots
 ```dataview
 LIST FROM ""
 WHERE contains(file.inlinks.file.name, this.file.name)
 ```
 
-## Child
+## Childs
 ```dataview
 LIST FROM ""
 WHERE contains(file.outlinks.file.name, this.file.name)

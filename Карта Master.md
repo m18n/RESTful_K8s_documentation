@@ -4,43 +4,55 @@ tags:
 Data: 2023-12-06
 ---
 Карта [[Master]] це карта де записані всі модулі([[Server Logic]],[[Connector Manager]]) їхні зв'язки та тд. Це потрібно для того щоб знаходити найшвидший шлях до конкретного поду([[Connector Manager]]). Це дає [[Оптимізація]]. Також потім там буде розрахування по завантаженню [[Server Logic]] та шукатись оптимальний шлях. 
-## Idea
+## Facts
+```dataview
+LIST FROM ""
+WHERE contains(file.outlinks.file.name, this.file.name)
+AND contains(Type, "fact")
+```
+## Topics
+```dataview
+LIST FROM ""
+WHERE contains(file.outlinks.file.name, this.file.name)
+AND contains(Type, "topic")
+```
+## Ideas
 ```dataview
 LIST FROM ""
 WHERE contains(file.outlinks.file.name, this.file.name)
 AND contains(Type, "idea")
 ```
-## Question
+## Questions
 ```dataview
 LIST FROM ""
 WHERE contains(file.outlinks.file.name, this.file.name)
 AND contains(Type, "question")
 ```
-## Answer
+## Answers
 ```dataview
 LIST FROM ""
 WHERE contains(file.outlinks.file.name, this.file.name)
 AND contains(Type, "answer")
 ```
-## Bug
+## Bugs
 ```dataview
 LIST FROM ""
 WHERE contains(file.outlinks.file.name, this.file.name)
 AND contains(Type, "bug")
 ```
-## Fix
+## Fixs
 ```dataview
 LIST FROM ""
 WHERE contains(file.outlinks.file.name, this.file.name)
 AND contains(Type, "fix")
 ```
-## Root
+## Roots
 ```dataview
 LIST FROM ""
 WHERE contains(file.inlinks.file.name, this.file.name)
 ```
 
-## Child
+## Childs
 ```dataview
 LIST FROM ""
 WHERE contains(file.outlinks.file.name, this.file.name)
