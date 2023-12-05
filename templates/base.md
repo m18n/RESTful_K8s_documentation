@@ -1,9 +1,9 @@
 ---
 Type: 
 tags: 
-Data: 2023-12-05
+Data: {{date}}
 ---
-Цей модуль відповідає за клієнт 
+
 ## Question
 ```dataview
 LIST FROM ""
