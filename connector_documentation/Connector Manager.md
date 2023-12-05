@@ -1,5 +1,5 @@
 ---
-Type: 
+Type: topic
 tags: 
 Data: 2023-12-05
 ---
