@@ -4,6 +4,12 @@ tags:
 Data: {{date}}
 ---
 
+## Idea
+```dataview
+LIST FROM ""
+WHERE contains(file.outlinks.file.name, this.file.name)
+AND contains(Type, "idea")
+```
 ## Question
 ```dataview
 LIST FROM ""

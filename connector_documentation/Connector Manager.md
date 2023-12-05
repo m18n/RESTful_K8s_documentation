@@ -4,6 +4,12 @@ tags:
 Data: 2023-12-05
 ---
 Цей модуль відповідає за клієнт 
+## Idea
+```dataview
+LIST FROM ""
+WHERE contains(file.outlinks.file.name, this.file.name)
+AND contains(Type, "idea")
+```
 ## Question
 ```dataview
 LIST FROM ""
