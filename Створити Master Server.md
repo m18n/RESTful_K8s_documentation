@@ -1,9 +1,9 @@
 ---
-Type: topic
+Type: task
 tags: 
 Data: 2023-12-06
 ---
-Цей модуль являється мастер тому що він роздає всі карти розтушування модулів у [[Server Logic]] і [[Connector Manager]] в [[kubernetes]]. 
+- [ ] Створити Master в github
 ## Facts
 ```dataview
 LIST FROM ""

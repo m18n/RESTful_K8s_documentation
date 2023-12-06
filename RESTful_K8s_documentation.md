@@ -3,7 +3,7 @@ Type: topic
 tags: 
 Data: 2023-12-06
 ---
-Цей проект складається з двух частин [[Server Logic]] і [[Connector Manager]]
+Цей проект складається з частин [[RESTServer]] і [[RESTConnector]] і [[Master Server]]
 ## Facts
 ```dataview
 LIST FROM ""

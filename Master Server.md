@@ -1,28 +1,9 @@
 ---
-Type: fact
+Type: topic
 tags: 
 Data: 2023-12-06
 ---
-це структура шаблона модулів([[RESTConnector]],[[RESTServer]]) в [[Карта Master]] яка зберігається в [[База даних]]
-Та це шаблон по якому створюються [[Запущені модулі у Master]]
-###  Поясню за поля
-1. hash_tamplate: це унікальний код шаблона 
-2. name_container: це назва контейнера докера
-3. name_node: це назва вузла де запущений контейнер
-5. name: це назва яка дадуть модулю
-6. count: це кількість модулів яка має бути запущена 
-7. connections: це масив інших модулів з яким пов'язаний цей модуль
-### Це приклад реального запущеного модуля
-```json
-{
-      "hash_tamplate":"2xde",
-      "name_container": "Tasker",
-      "name_node":"test",
-      "name":"Local Tasker",
-      "count":"1",
-      "connections": [""]
-}
-```
+Цей модуль являється мастер але він є сервером([[RESTServer]])тому що він роздає всі карти розтушування модулів у [[RESTServer]] і [[RESTConnector]] в [[kubernetes]]. 
 ## Facts
 ```dataview
 LIST FROM ""

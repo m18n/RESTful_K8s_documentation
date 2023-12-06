@@ -46,6 +46,12 @@ LIST FROM ""
 WHERE contains(file.outlinks.file.name, this.file.name)
 AND contains(Type, "fix")
 ```
+## Tasks
+```dataview
+LIST FROM ""
+WHERE contains(file.outlinks.file.name, this.file.name)
+AND contains(Type, "task")
+```
 ## Roots
 ```dataview
 LIST FROM ""

@@ -1,28 +1,9 @@
 ---
-Type: fact
+Type: topic
 tags: 
 Data: 2023-12-06
 ---
-це структура шаблона модулів([[RESTConnector]],[[RESTServer]]) в [[Карта Master]] яка зберігається в [[База даних]]
-Та це шаблон по якому створюються [[Запущені модулі у Master]]
-###  Поясню за поля
-1. hash_tamplate: це унікальний код шаблона 
-2. name_container: це назва контейнера докера
-3. name_node: це назва вузла де запущений контейнер
-5. name: це назва яка дадуть модулю
-6. count: це кількість модулів яка має бути запущена 
-7. connections: це масив інших модулів з яким пов'язаний цей модуль
-### Це приклад реального запущеного модуля
-```json
-{
-      "hash_tamplate":"2xde",
-      "name_container": "Tasker",
-      "name_node":"test",
-      "name":"Local Tasker",
-      "count":"1",
-      "connections": [""]
-}
-```
+Цей модуль є [[RESTConnector]] він і буде займатись всіма справами з [[База даних]]. Давати всім([[RESTConnector]],[[RESTServer]],[[Master Server]]) карту( [[Карта Master]] ). Він буде підключений тільки до серверу [[Master Server]] через який буде передавати всім карту.
 ## Facts
 ```dataview
 LIST FROM ""
@@ -64,6 +45,12 @@ AND contains(Type, "bug")
 LIST FROM ""
 WHERE contains(file.outlinks.file.name, this.file.name)
 AND contains(Type, "fix")
+```
+## Tasks
+```dataview
+LIST FROM ""
+WHERE contains(file.outlinks.file.name, this.file.name)
+AND contains(Type, "task")
 ```
 ## Roots
 ```dataview
